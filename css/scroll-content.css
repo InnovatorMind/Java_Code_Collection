@@ -1,0 +1,21 @@
+
+.sidebar {
+  width: 200px;
+  height: 100%;
+  overflow: scroll;
+  scrollbar-width: thin;
+  background: #353535;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+  color: white;
+} 
+
