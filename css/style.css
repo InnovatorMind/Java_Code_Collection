@@ -1,5 +1,3 @@
-
-
 *{
   margin: 0;
   padding: 0;
@@ -7,11 +5,10 @@
   font-family: sans-serif;
 }
 
-
 body {
   width: 100%;
+  background: #353535;
 }
-
 
 header {
   width: 100%;
@@ -23,7 +20,7 @@ header {
 .nav-bar {
   /* border: 2px solid rgb(51, 215, 78); */
   width: 100%;
-  background: #353535;
+  background: rgb(30, 30, 30);
   padding: 10px 0px;
 }
 
@@ -51,6 +48,7 @@ header {
   display: flex;
   align-items: center;
   color: white;
+  border-radius: 10px;
   font-weight: bolder;
 }
 
@@ -91,15 +89,21 @@ header {
 }
 
 main {
-  height: 100vh;
+  height: 85vh;
   padding-top: 0px;
   width: 100%;
 }
+
+
+
 
 iframe {
   width: 100%;
   height: 100%;
   border: none;
   padding: 0;
-  border: 2px solid rebeccapurple;
+  /* border: 2px solid rebeccapurple; */
+  background: rgb(30, 30, 30);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -1,34 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/scroll-content.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
 </head>
-<body>  
-  <div class="sidebar">
-    <a href="#">Code1</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
-    <a href="#">Code</a>
+
+<body>
+  <div class="collection">
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <div class="sidebar"  id="sidebar">
+      <a href="#helloWorld" style="margin-top: 40px;">Hello World</a>
+      <a href="#inputInJava">Input In JAVA</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+      <a href="#">Code</a>
+    </div>
+
+
+    <div class="content">
+
+      <!-- 1. Hello WOrld -->
+       <section id="helloWorld">
+        <h1>Java Code Example Hello World</h1>
+        <div class="code-container">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre>
+              <code class="language-java">
+ public class HelloWorld {
+    public static void main(String[] args) {
+       System.out.println("Hello, World!");
+       }
+       }
+              </code>
+          </pre>
+        </div>
+      </section>
+
+       <section id="inputInJava">
+        <h1>Java Code Example with Prism.js</h1>
+        <div class="code-container">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre>
+              <code class="language-java">
+  public class HelloWorld {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      }
+      }
+              </code>
+          </pre>
+        </div>
+      </section>
+    
+       <section id="inputInJava">
+        <h1>Java Code Example with Prism.js</h1>
+        <div class="code-container">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre>
+              <code class="language-java">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+    }
+    }
+              </code>
+          </pre>
+        </div>
+      </section>
+    
+
+    </div>
   </div>
-  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+  <script src="../JavaScripts/scroll-content.js"></script>
 </body>
+
 </html>
