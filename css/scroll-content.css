@@ -81,7 +81,7 @@ body {
 
 
 .content {
-  border: 5px solid red;
+  /* border: 5px solid red; */
   margin-left: 200px;
   width: 100%;
   color: white;
