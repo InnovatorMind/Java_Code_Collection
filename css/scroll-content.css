@@ -16,6 +16,9 @@ body {
 
 }
 
+h1 {
+  padding: 10px;
+}
 
 .collection {
   display: flex;
@@ -72,13 +75,14 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: auto;
 }
 
 section> h2 {
   margin: 10px 0px;
   color: red;
 }
+
 
 code {
   color: skyblue;
