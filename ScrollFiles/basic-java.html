@@ -45,7 +45,7 @@
     <div class="content">
 
       <!--  Hello WOrld -->
-       <section id="helloWorld">
+       <section id="helloWorld" class="sidebar-link">
         <h2>Printing to the Console</h2>
         <p>One of the first things you'll learn in any programming language is how to print output to the console. In Java, you use the <code>System.out.println</code> method to do this.</p>
         <div class="code-container">
@@ -69,7 +69,8 @@ public class HelloWorld {
       </section>
 
       <!-- 1. Printing Normal Text -->
-       <section id="print_noraml_text">
+       <section id="print_noraml_text"
+       class="sidebar-link">
         <h1>1. Printing Normal Text</h1>
         <p>Example-</p>
         <div class="code-container">
@@ -175,10 +176,16 @@ public class HelloWorld {
               </code>
           </pre>
           <p>Special characters like \n, \t, etc., can be used to format the output.
-            \n: Newline (moves to the next line)
-            \t: Tab (inserts a horizontal tab space)
-            \\: Backslash (prints a single backslash)
-            \": Double quote (prints a double quote)</p>
+            <ul>
+              <li>\n: Newline (moves to the next line)</li>
+              <li> \t: Tab (inserts a horizontal tab space)</li>
+              <li>\\: Backslash (prints a single backslash)</li>
+              <li>  \": Double quote (prints a double quote)</p></li>
+            </ul>
+            
+           
+            
+          
         </div>
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           <pre>
