@@ -1,0 +1,27 @@
+[
+    {
+      "title": "If-Else Statement",
+      "id": "if_else",
+      "description": "The if-else statement executes a block of code if a specified condition is true. Otherwise, it executes the else block.",
+      "code": "public class Conditionals {\n  public static void main(String[] args) {\n    int number = 10;\n    if (number > 0) {\n      System.out.println(\"The number is positive.\");\n    } else {\n      System.out.println(\"The number is not positive.\");\n    }\n  }\n}"
+    },
+    {
+      "title": "Nested If Statement",
+      "id": "nested_if",
+      "description": "Nested if statements allow multiple conditions to be checked within another if block.",
+      "code": "public class Conditionals {\n  public static void main(String[] args) {\n    int number = 10;\n    if (number > 0) {\n      System.out.println(\"Positive number\");\n      if (number > 5) {\n        System.out.println(\"Greater than 5\");\n      }\n    }\n  }\n}"
+    },
+    {
+      "title": "Else-If Ladder",
+      "id": "else_if_ladder",
+      "description": "Else-if statements allow multiple conditions to be checked sequentially.",
+      "code": "public class Conditionals {\n  public static void main(String[] args) {\n    int number = 0;\n    if (number > 0) {\n      System.out.println(\"Positive number\");\n    } else if (number < 0) {\n      System.out.println(\"Negative number\");\n    } else {\n      System.out.println(\"Zero\");\n    }\n  }\n}"
+    },
+    {
+      "title": "Switch Case Statement",
+      "id": "switch_case",
+      "description": "The switch statement allows executing different blocks of code based on different cases.",
+      "code": "public class Conditionals {\n  public static void main(String[] args) {\n    int day = 3;\n    switch (day) {\n      case 1:\n        System.out.println(\"Monday\");\n        break;\n      case 2:\n        System.out.println(\"Tuesday\");\n        break;\n      case 3:\n        System.out.println(\"Wednesday\");\n        break;\n      default:\n        System.out.println(\"Other day\");\n    }\n  }\n}"
+    }
+  ]
+  

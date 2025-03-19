@@ -1,0 +1,45 @@
+[
+    {
+      "title": "For Loop",
+      "id": "for_loop",
+      "description": "A for loop allows code to be executed repeatedly based on a given condition.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
+    },
+    {
+      "title": "While Loop",
+      "id": "while_loop",
+      "description": "A while loop executes a block of code repeatedly as long as the given condition remains true.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 1;\n    while (i <= 5) {\n      System.out.println(\"Iteration: \" + i);\n      i++;\n    }\n  }\n}"
+    },
+    {
+      "title": "Do-While Loop",
+      "id": "do_while_loop",
+      "description": "A do-while loop executes the code block once before checking the condition.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 1;\n    do {\n      System.out.println(\"Iteration: \" + i);\n      i++;\n    } while (i <= 5);\n  }\n}"
+    },
+    {
+      "title": "For-Each Loop",
+      "id": "for_each_loop",
+      "description": "A for-each loop is used to iterate over elements in an array or collection.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    int[] numbers = {1, 2, 3, 4, 5};\n    for (int num : numbers) {\n      System.out.println(\"Number: \" + num);\n    }\n  }\n}"
+    },
+    {
+      "title": "Nested Loops",
+      "id": "nested_loops",
+      "description": "A loop inside another loop is called a nested loop. It is used for multi-dimensional iteration.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 3; i++) {\n      for (int j = 1; j <= 3; j++) {\n        System.out.println(\"i: \" + i + \", j: \" + j);\n      }\n    }\n  }\n}"
+    },
+    {
+      "title": "Break Statement",
+      "id": "break_statement",
+      "description": "The break statement is used to exit a loop immediately when a condition is met.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) break;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
+    },
+    {
+      "title": "Continue Statement",
+      "id": "continue_statement",
+      "description": "The continue statement skips the current iteration and moves to the next one.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) continue;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
+    }
+  ]
+  

@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Defining a Method",
+      "id": "method_definition",
+      "description": "A method is a block of code that performs a specific task.",
+      "code": "public class MethodsExample {\n  static void greet() {\n    System.out.println(\"Hello, welcome to Java!\");\n  }\n  public static void main(String[] args) {\n    greet();\n  }\n}"
+    },
+    {
+      "title": "Method with Parameters",
+      "id": "method_parameters",
+      "description": "A method can accept parameters to perform operations based on provided values.",
+      "code": "public class MethodsExample {\n  static void greet(String name) {\n    System.out.println(\"Hello, \" + name + \"!\");\n  }\n  public static void main(String[] args) {\n    greet(\"Alice\");\n  }\n}"
+    },
+    {
+      "title": "Method with Return Value",
+      "id": "method_return",
+      "description": "A method can return a value to the caller.",
+      "code": "public class MethodsExample {\n  static int square(int num) {\n    return num * num;\n  }\n  public static void main(String[] args) {\n    int result = square(5);\n    System.out.println(\"Square of 5: \" + result);\n  }\n}"
+    },
+    {
+      "title": "Method Overloading",
+      "id": "method_overloading",
+      "description": "Method overloading allows multiple methods with the same name but different parameters.",
+      "code": "public class MethodsExample {\n  static int add(int a, int b) {\n    return a + b;\n  }\n  static double add(double a, double b) {\n    return a + b;\n  }\n  public static void main(String[] args) {\n    System.out.println(add(5, 10));\n    System.out.println(add(5.5, 2.2));\n  }\n}"
+    },
+    {
+      "title": "Recursion",
+      "id": "method_recursion",
+      "description": "Recursion is when a method calls itself to solve a problem in smaller steps.",
+      "code": "public class MethodsExample {\n  static int factorial(int n) {\n    if (n == 1) return 1;\n    return n * factorial(n - 1);\n  }\n  public static void main(String[] args) {\n    System.out.println(\"Factorial of 5: \" + factorial(5));\n  }\n}"
+    }
+  ]
+  

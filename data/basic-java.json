@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Printing to the Console",
+    "id": "helloWorld",
+    "description": "One of the first things you'll learn in any programming language is how to print output to the console. In Java, you use the System.out.println method to do this.",
+    "code": "public class HelloWorld {\n   public static void main(String[] args) {\n      System.out.println(\"Hello, World!\");\n   }\n}"
+  },
+  {
+    "title": "Printing Normal Text",
+    "id": "print_normal_text",
+    "description": "You can print any text string by enclosing it within double quotes (\"\"). The text will be displayed exactly as it appears.",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Java is awesome!\");  \n    System.out.println(\"Learning Java step by step.\");  \n    System.out.println(\"12345\");  \n  }\n}"
+  },
+  {
+    "title": "Printing Variables",
+    "id": "print_variables",
+    "description": "You can print the value of variables. Just pass the variable name to System.out.println(), and it will print the current value of that variable.",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    int number = 10;\n    System.out.println(number);\n  }\n}"
+  },
+  {
+    "title": "Print Special Characters",
+    "id": "print_special_characters",
+    "description": "Special characters like \\n, \\t, etc., can be used to format the output.",
+    "code": "System.out.println(\"Java\\nProgramming\");\nSystem.out.println(\"1\\t2\\t3\");\nSystem.out.println(\"Path: C:\\\\Program Files\\Java\");\nSystem.out.println(\"She said, \\\"Java is fun!\\\"\");"
+  },
+  {
+    "title": "Print Expressions",
+    "id": "print_expressions",
+    "description": "You can print the result of arithmetic or logical expressions directly.",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(5 + 3);\n  }\n}"
+  },
+  {
+    "title": "Print Boolean Values",
+    "id": "print_boolean",
+    "description": "You can print boolean values directly using System.out.println().",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    boolean isJavaFun = true;\n    System.out.println(isJavaFun);\n  }\n}"
+  },
+  {
+    "title": "Print Floating Point Numbers",
+    "id": "print_floating_point",
+    "description": "Floating point numbers can be printed using System.out.println().",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    double pi = 3.14159;\n    System.out.println(pi);\n  }\n}"
+  },
+  {
+    "title": "Print Using printf",
+    "id": "print_using_printf",
+    "description": "You can use printf() for formatted output, similar to C-style printf.",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    System.out.printf(\"Value of Pi: %.2f\", 3.14159);\n  }\n}"
+  },
+  {
+    "title": "Print Unicode Characters",
+    "id": "print_unicode_characters",
+    "description": "You can print Unicode characters using escape sequences.",
+    "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Smiley: ☺\");\n  }\n}"
+  }
+]

@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Introduction to Arrays",
+      "id": "array_intro",
+      "description": "An array is a collection of variables of the same type, stored in contiguous memory locations.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {1, 2, 3, 4, 5};\n    System.out.println(\"First Element: \" + numbers[0]);\n  }\n}"
+    },
+    {
+      "title": "Declaring and Initializing Arrays",
+      "id": "array_declaration",
+      "description": "Arrays can be declared and initialized using different approaches.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = new int[5];\n    numbers[0] = 10;\n    System.out.println(\"First Element: \" + numbers[0]);\n  }\n}"
+    },
+    {
+      "title": "Traversing an Array using For Loop",
+      "id": "array_traversal",
+      "description": "You can loop through an array using a for loop.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {10, 20, 30, 40, 50};\n    for (int i = 0; i < numbers.length; i++) {\n      System.out.println(\"Element at index \" + i + \": \" + numbers[i]);\n    }\n  }\n}"
+    },
+    {
+      "title": "Traversing an Array using For-Each Loop",
+      "id": "array_foreach",
+      "description": "You can also iterate through an array using a for-each loop.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {10, 20, 30, 40, 50};\n    for (int num : numbers) {\n      System.out.println(\"Number: \" + num);\n    }\n  }\n}"
+    },
+    {
+      "title": "Multidimensional Arrays",
+      "id": "array_multidimensional",
+      "description": "A multidimensional array is an array of arrays.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[][] matrix = { {1, 2, 3}, {4, 5, 6} };\n    System.out.println(\"Element at (1,2): \" + matrix[1][2]);\n  }\n}"
+    }
+  ]
+  

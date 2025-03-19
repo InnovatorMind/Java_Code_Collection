@@ -5,7 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Java Code Collection</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  
+  <script src="./JavaScripts/main.js" defer ></script>
 </head>
 
 <body>
@@ -15,48 +22,40 @@
       <div class="menu">
         <ul>
           <li><a href="">JAVA CODES</a></li>
-          <!-- I have  to chnage here  -->
+          <!-- I have to chnage here  -->
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
-          <!-- <li><a href="">Contact</a></li> -->
         </ul>
       </div>
-      <img style="height: 105px; position: absolute; top: 0; right: 0;   z-index: 1;
-" src="sasuke.png" alt="">
+      <img style="height: 105px; position: absolute; top: 0; right: 0;   z-index: 1;" src="sasuke.png" alt="">
+
 
       <div class="scroll-content">
-        <a href="#" onclick="loadPage('ScrollFiles/basic-java.html')">BASIC JAVA</a>
-        <a href="#" onclick="loadPage('ScrollFiles/operators.html')">OPERATORS</a>
-        <a href="#" onclick="loadPage('ScrollFiles/if-else-switch-case.html')">IF ELSE & SWITCH CASE</a>
-        <a href="#" onclick="loadPage('ScrollFiles/loops.html')">LOOPS</a>
-        <a href="#" onclick="loadPage('ScrollFiles/array.html')">ARRAY</a>
-        <a href="#" onclick="loadPage('ScrollFiles/methods-and-function.html')">METHODS AND FUNCTION</a>
-        <a href="#" onclick="loadPage('ScrollFiles/class-and-object.html')">CLASS AND OBJECT</a>
-        <a href="#" onclick="loadPage('ScrollFiles/string-and-string-buffer.html')">STRING AND STRING BUFFER</a>
-        <a href="#" onclick="loadPage('ScrollFiles/inheritance.html')">INHERITANCE</a>
-        <a href="#" onclick="loadPage('ScrollFiles/package.html')">PACKAGE</a>
-        <a href="#" onclick="loadPage('ScrollFiles/exception-handling.html')">EXCEPTION HANDLING</a>
-        <a href="#" onclick="loadPage('ScrollFiles/enumeration-and-wrapper-classes.html')">ENUMERATION & WRAPPER CLASSES</a>
-        <a href="#" onclick="loadPage('ScrollFiles/applet.html')">APPLET</a>
-        <a href="#" onclick="loadPage('ScrollFiles/thread.html')">THREAD</a>
-        <a href="#" onclick="loadPage('ScrollFiles/event-handling.html')">EVENT HANDLING</a>
-        <a href="#" onclick="loadPage('ScrollFiles/awt.html')">AWT</a>
-        <a href="#" onclick="loadPage('ScrollFiles/networking.html')">NETWORKING</a>
-        <a href="#" onclick="loadPage('ScrollFiles/input-output-stream.html')">INPUT-OUTPUT STREAM</a>
-        <a href="#" onclick="loadPage('ScrollFiles/generic.html')">GENERIC</a>
-        <a href="#" onclick="loadPage('ScrollFiles/reflection.html')">REFLECTION</a>
-        <a href="#" onclick="loadPage('ScrollFiles/collection-classes.html')">COLLECTION CLASSES</a>
-        <a href="#" onclick="loadPage('ScrollFiles/java-beans.html')">JAVA BEANS</a>
-        <a href="#" onclick="loadPage('ScrollFiles/mix.html')">MIX</a>
+        <a href="#" onclick="loadPage('basic-java')">BASIC JAVA</a>
+        <a href="#" onclick="loadPage('operators')">OPERATORS</a>
+        <a href="#" onclick="loadPage('if-else&switch')">CONDITIONAL</a>
+        <a href="#" onclick="loadPage('loops')">LOOPS</a>
+        <a href="#" onclick="loadPage('array')">Array</a>
+        <a href="#" onclick="loadPage('function')">Function</a>
       </div>
     </div>
   </header>
   
   <main>
-    <iframe id="contentFrame" src="./ScrollFiles/basic-java.html"></iframe>
+    <div class="collection">
+
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div class="sidebar" id="sidebar"></div>
+    
+        <div id="content"></div>
+     </div>
   </main>
   
-  <script src="JavaScripts/main.js"></script>
 </body>
 
 </html>

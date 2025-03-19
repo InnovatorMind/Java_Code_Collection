@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Arithmetic Operators",
+    "id": "arithmetic_operators",
+    "description": "Arithmetic operators are used for performing mathematical calculations like addition, subtraction, multiplication, and division.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 10, b = 5;\n    System.out.println(\"Addition: \" + (a + b));\n    System.out.println(\"Subtraction: \" + (a - b));\n    System.out.println(\"Multiplication: \" + (a * b));\n    System.out.println(\"Division: \" + (a / b));\n    System.out.println(\"Modulus: \" + (a % b));\n  }\n}"
+  },
+  {
+    "title": "Relational (Comparison) Operators",
+    "id": "relational_operators",
+    "description": "Relational operators are used to compare two values and return a boolean result.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 10, b = 5;\n    System.out.println(\"a == b: \" + (a == b));\n    System.out.println(\"a != b: \" + (a != b));\n    System.out.println(\"a > b: \" + (a > b));\n    System.out.println(\"a < b: \" + (a < b));\n    System.out.println(\"a >= b: \" + (a >= b));\n    System.out.println(\"a <= b: \" + (a <= b));\n  }\n}"
+  },
+  {
+    "title": "Logical Operators",
+    "id": "logical_operators",
+    "description": "Logical operators are used to combine multiple boolean expressions and return a boolean result.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    boolean x = true, y = false;\n    System.out.println(\"x && y: \" + (x && y));\n    System.out.println(\"x || y: \" + (x || y));\n    System.out.println(\"!x: \" + (!x));\n  }\n}"
+  },
+  {
+    "title": "Bitwise Operators",
+    "id": "bitwise_operators",
+    "description": "Bitwise operators perform bit-level operations on integers.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 5, b = 3;\n    System.out.println(\"a & b: \" + (a & b));\n    System.out.println(\"a | b: \" + (a | b));\n    System.out.println(\"a ^ b: \" + (a ^ b));\n    System.out.println(\"~a: \" + (~a));\n  }\n}"
+  },
+  {
+    "title": "Assignment Operators",
+    "id": "assignment_operators",
+    "description": "Assignment operators are used to assign values to variables.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 10;\n    a += 5;\n    System.out.println(\"a += 5: \" + a);\n    a -= 3;\n    System.out.println(\"a -= 3: \" + a);\n    a *= 2;\n    System.out.println(\"a *= 2: \" + a);\n    a /= 4;\n    System.out.println(\"a /= 4: \" + a);\n  }\n}"
+  },
+  {
+    "title": "Unary Operators",
+    "id": "unary_operators",
+    "description": "Unary operators operate on a single operand. These include increment, decrement, negation, and logical NOT.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 5;\n    System.out.println(\"Post-increment: \" + (a++));\n    System.out.println(\"Pre-increment: \" + (++a));\n    System.out.println(\"Post-decrement: \" + (a--));\n    System.out.println(\"Pre-decrement: \" + (--a));\n  }\n}"
+  },
+  {
+    "title": "Ternary Operator",
+    "id": "ternary_operator",
+    "description": "The ternary operator is a shorthand for an if-else statement.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 10, b = 5;\n    int min = (a < b) ? a : b;\n    System.out.println(\"Minimum: \" + min);\n  }\n}"
+  },
+  {
+    "title": "Shift Operators",
+    "id": "shift_operators",
+    "description": "Shift operators move the bits of a number left or right.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 8;\n    System.out.println(\"Left shift: \" + (a << 2));\n    System.out.println(\"Right shift: \" + (a >> 2));\n  }\n}"
+  }
+]
