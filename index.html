@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Code Collection</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Code Collection</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
-  
-  <script src="./JavaScripts/main.js" defer ></script>
-</head>
+    <script src="./JavaScripts/main.js" defer></script>
+  </head>
 
-<body>
-
-  <header>
-    <div class="nav-bar">
-      <div class="menu">
-        <ul>
-          <li><a href="">JAVA CODES</a></li>
-          <!-- I have to chnage here  -->
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-        </ul>
-      </div>
-      <img style="height: 105px; position: absolute; top: 0; right: 0;   z-index: 1;" src="sasuke.png" alt="">
-
-
-      <div class="scroll-content">
-        <a href="#" onclick="loadPage('basic-java')">BASIC JAVA</a>
-        <a href="#" onclick="loadPage('operators')">OPERATORS</a>
-        <a href="#" onclick="loadPage('if-else&switch')">CONDITIONAL</a>
-        <a href="#" onclick="loadPage('loops')">LOOPS</a>
-        <a href="#" onclick="loadPage('array')">Array</a>
-        <a href="#" onclick="loadPage('function')">Function</a>
-      </div>
-    </div>
-  </header>
-  
-  <main>
-    <div class="collection">
-
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <div class="menu">
+          <ul>
+            <li><a href="">JAVA CODES</a></li>
+            <!-- I have to chnage here  -->
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+          </ul>
         </div>
+        <img
+          style="
+            height: 105px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+          "
+          src="sasuke.png"
+          alt=""
+        />
 
+        <div class="scroll-content">
+          <button class="menu-toggle" id="mobile-menu" title="sideBar-button">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <a href="#">-></a>
+          <a href="#" onclick="loadPage('basic-java')">BASIC JAVA</a>
+          <a href="#" onclick="loadPage('operators')">OPERATORS</a>
+          <a href="#" onclick="loadPage('if-else&switch')">CONDITIONAL</a>
+          <a href="#" onclick="loadPage('loops')">LOOPS</a>
+          <a href="#" onclick="loadPage('array')">Array</a>
+          <a href="#" onclick="loadPage('function')">Function</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="collection">
         <div class="sidebar" id="sidebar"></div>
-    
-        <div id="content"></div>
-     </div>
-  </main>
-  
-</body>
 
+        <div id="content"></div>
+      </div>
+    </main>
+  </body>
 </html>

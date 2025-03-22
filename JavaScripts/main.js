@@ -3,13 +3,10 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
   sidebar.classList.toggle('show');
 });
 
-
 // Automatically load "basic-java" when the page loads
 window.addEventListener("DOMContentLoaded", () => {
-  // loadSideBar()
   loadPage("basic-java"); // Default topic
 });
-
 
 function loadPage(topic) {
   if (!topic) {
@@ -17,21 +14,23 @@ function loadPage(topic) {
     return; // Exit the function
   }
 
-  // side bar
+  // Clear sidebar
   const sideBar = document.getElementById('sidebar');
   sideBar.innerText = "";
 
+  // Load sidebar items
   fetch(`data/${topic}.json`)
-  .then((response) => response.json())
-  .then((data) =>  {
-    data.forEach((item) => {
-      const link = document.createElement("a");
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((item) => {
+        const link = document.createElement("a");
         link.href = item.id ? `#${item.id}` : "#"; // Set href dynamically
         link.textContent = item.title; // Set text content
         sideBar.appendChild(link);
+      });
     });
-  });
 
+  // Load content
   fetch(`data/${topic}.json`)
     .then((response) => response.json())
     .then((data) => {
@@ -44,37 +43,48 @@ function loadPage(topic) {
         section.classList.add("sidebar-link");
         section.id = item.id; // Set the section's ID from JSON data
 
-        section.innerHTML = `
-          <h2>${item.title}</h2>
-          <p>${item.description}</p>
-          <div class="code-container">
-            <button class="copy-btn">Copy</button>
-            <pre><code class="language-java"></code></pre>
-          </div>
-        `;
-
-        // Append section before setting code text
+        // Create elements
+        const title = document.createElement("h2");
+        title.textContent = item.title;
+        
+        const description = document.createElement("p");
+        description.textContent = item.description;
+        
+        const codeContainer = document.createElement("div");
+        codeContainer.className = "code-container";
+        
+        const pre = document.createElement("pre");
+        const codeElement = document.createElement("code");
+        codeElement.className = "language-java";
+        codeElement.textContent = item.code;
+        
+        const copyBtn = document.createElement("button");
+        copyBtn.className = "copy-btn";
+        copyBtn.textContent = "Copy";
+        
+        // Append elements in proper order
+        pre.appendChild(codeElement);
+        codeContainer.appendChild(copyBtn);
+        codeContainer.appendChild(pre);
+        
+        section.appendChild(title);
+        section.appendChild(description);
+        section.appendChild(codeContainer);
+        
+        // Append section to the content container
         contentContainer.appendChild(section);
-
-        // Select the code element and set text properly
-        const codeElement = section.querySelector("pre code");
-        codeElement.textContent = item.code; // Properly formats code with line breaks
 
         // Apply syntax highlighting after content is added
         Prism.highlightElement(codeElement);
 
         // Add copy functionality
-        section
-          .querySelector(".copy-btn")
-          .addEventListener("click", function () {
-            copyCode(item.code, this);
-          });
+        copyBtn.addEventListener("click", function() {
+          copyCode(item.code, this);
+        });
       });
     })
     .catch((error) => console.error("Error loading tutorial data:", error));
-
-    Prism.highlightAll();
-  }
+}
 
 // Copy function
 function copyCode(code, button) {
