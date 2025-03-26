@@ -24,6 +24,7 @@ body {
   width: 100%;
   background: rgb(0, 0, 0); 
   padding: 10px 0px;
+  z-index: 1;
 }
 
 .nav-bar>.menu> ul {
@@ -162,7 +163,7 @@ h1 {
 }
 
 #content div:first-child {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .codeBlock {
@@ -171,10 +172,13 @@ h1 {
 }
 
 pre {
-  background: rgba(0, 255, 251, 0.1) !important; 
+  background: rgba(2, 3, 3, 0.473) !important; 
   padding: 10px;
   border-radius: 4px;
   overflow: auto;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px); 
+  position: relative;
 }
   
 .copy-button {
@@ -215,6 +219,9 @@ code {
       margin-left: 0 !important;
       padding: 20px;
       padding-top: 60px;
+  }
+  #content div:first-child {
+   margin-top: 56px;
   }
   
 }
