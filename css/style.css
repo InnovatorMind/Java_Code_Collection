@@ -126,12 +126,11 @@ h1 {
   scrollbar-color: black;
 }
 
-.sidebar a:hover {
+.sidebar a.active {
   color: #38BDF8;
   font-weight: 700;
   border-left: 2px solid #ffffff;
-} 
-
+}
 
 /* Hamburger Menu Styles */
 .menu-toggle {

@@ -1,5 +1,3 @@
-
-
 document.querySelector(".menu-toggle").addEventListener("click", function () {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("show");
@@ -73,6 +71,7 @@ function loadPage(topic) {
       });
 
       showData(data);
+      something();
     });
 }
 
@@ -86,3 +85,39 @@ function copyCode(code, button) {
     })
     .catch((err) => console.error("Failed to copy:", err));
 }
+
+
+
+function something(){
+  const sections = document.querySelectorAll(".code-block");
+  console.log("Sections:", sections);
+  
+  const sidebarLinks = document.querySelectorAll("#sidebar a");
+  console.log("Sidebar Links:", sidebarLinks);
+  
+  if (sections.length === 0 || sidebarLinks.length === 0) {
+    console.error("Sections or sidebar links not found. Check your HTML structure.");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach((link) => link.classList.remove("active"));
+
+          const activeLink = document.querySelector(`#sidebar a[href="#${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add("active");
+          } else {
+            console.warn(`No sidebar link found for #${entry.target.id}`);
+          }
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+};
+
