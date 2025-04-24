@@ -125,7 +125,6 @@ h1 {
 
 .sidebar a.active {
   color: #38BDF8;
-  font-weight: 700;
   border-left: 2px solid #ffffff;
 }
 

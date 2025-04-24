@@ -44,7 +44,61 @@
   {
     "title": "Shift Operators",
     "id": "shift_operators",
-    "description": "Shift operators move the bits of a number left or right.",
-    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 8;\n    System.out.println(\"Left shift: \" + (a << 2));\n    System.out.println(\"Right shift: \" + (a >> 2));\n  }\n}"
+    "description": "Shift operators move the bits of a number left or right. This example demonstrates left shift, signed right shift (>>), and unsigned right shift (>>>). The unsigned right shift operator fills the left bits with zeros, which can be particularly noticeable when working with negative numbers.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int positive = 8;\n    int negative = -8;\n\n    System.out.println(\"Positive number: \" + positive);\n    System.out.println(\"Left shift: \" + (positive << 2));\n    System.out.println(\"Signed Right shift (>>): \" + (positive >> 2));\n    System.out.println(\"Unsigned Right shift (>>>): \" + (positive >>> 2));\n    \n    System.out.println(\"\\nNegative number: \" + negative);\n    System.out.println(\"Signed Right shift (>>): \" + (negative >> 2));\n    System.out.println(\"Unsigned Right shift (>>>): \" + (negative >>> 2));\n  }\n}"
+  },
+  {
+    "title": "Operator Precedence Example",
+    "id": "operator_precedence",
+    "description": "This example demonstrates how Java evaluates expressions based on operator precedence. Using parentheses can help enforce the desired order of operations.",
+    "code": "public class Operators {\n  public static void main(String[] args) {\n    int a = 10, b = 5, c = 2;\n    // Without parentheses, multiplication has higher precedence than addition\n    int result1 = a + b * c; // Evaluated as a + (b * c)\n    // With parentheses, the addition is performed first\n    int result2 = (a + b) * c;\n    \n    System.out.println(\"a + b * c = \" + result1);\n    System.out.println(\"(a + b) * c = \" + result2);\n  }\n}"
+  },
+  {
+    "title": "Sum of Two Integers",
+    "id": "sum_two_integers",
+    "description": "Takes two integers as input from the user, calculates the sum using the addition operator, and prints the result.",
+    "code": "import java.util.Scanner;\n\npublic class SumTwoIntegers {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first integer: \");\n        int num1 = scanner.nextInt();\n        System.out.print(\"Enter second integer: \");\n        int num2 = scanner.nextInt();\n        int sum = num1 + num2;\n        System.out.println(\"Sum: \" + sum);\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Arithmetic Operations on Two Numbers",
+    "id": "arithmetic_operations",
+    "description": "Takes two numbers as input and performs subtraction, multiplication, division, and modulus operations. (Assumes the second number is non-zero for division and modulus.)",
+    "code": "import java.util.Scanner;\n\npublic class ArithmeticOperations {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first number: \");\n        int a = scanner.nextInt();\n        System.out.print(\"Enter second number (non-zero): \");\n        int b = scanner.nextInt();\n        System.out.println(\"Subtraction (a - b): \" + (a - b));\n        System.out.println(\"Multiplication (a * b): \" + (a * b));\n        System.out.println(\"Division (a / b): \" + (a / b));\n        System.out.println(\"Modulus (a % b): \" + (a % b));\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Comparison of Two Numbers",
+    "id": "compare_numbers",
+    "description": "Takes two integers as input and uses relational operators to compare them. It then prints the boolean result of each comparison.",
+    "code": "import java.util.Scanner;\n\npublic class CompareNumbers {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first integer: \");\n        int a = scanner.nextInt();\n        System.out.print(\"Enter second integer: \");\n        int b = scanner.nextInt();\n        System.out.println(\"a == b: \" + (a == b));\n        System.out.println(\"a != b: \" + (a != b));\n        System.out.println(\"a > b: \" + (a > b));\n        System.out.println(\"a < b: \" + (a < b));\n        System.out.println(\"a >= b: \" + (a >= b));\n        System.out.println(\"a <= b: \" + (a <= b));\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Ternary Operator: Maximum Number",
+    "id": "ternary_maximum",
+    "description": "Takes two integers as input and uses the ternary operator to determine and print the maximum of the two numbers.",
+    "code": "import java.util.Scanner;\n\npublic class MaximumNumber {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first integer: \");\n        int a = scanner.nextInt();\n        System.out.print(\"Enter second integer: \");\n        int b = scanner.nextInt();\n        int max = (a > b) ? a : b;\n        System.out.println(\"Maximum: \" + max);\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Logical Operators: Check Range",
+    "id": "logical_operators_range",
+    "description": "Takes an integer as input and uses logical operators to check if the number is between 10 and 20 (inclusive). The result is printed as a boolean value.",
+    "code": "import java.util.Scanner;\n\npublic class CheckRange {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter an integer: \");\n        int num = scanner.nextInt();\n        boolean isBetween = (num >= 10) && (num <= 20);\n        System.out.println(\"Is the number between 10 and 20 (inclusive)? \" + isBetween);\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Bitwise Operators Example",
+    "id": "bitwise_example",
+    "description": "Takes two integers as input and demonstrates bitwise AND, OR, and XOR operators, printing out the computed results.",
+    "code": "import java.util.Scanner;\n\npublic class BitwiseExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter first integer: \");\n        int a = scanner.nextInt();\n        System.out.print(\"Enter second integer: \");\n        int b = scanner.nextInt();\n        System.out.println(\"a & b: \" + (a & b));\n        System.out.println(\"a | b: \" + (a | b));\n        System.out.println(\"a ^ b: \" + (a ^ b));\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Shift Operators Example",
+    "id": "shift_example",
+    "description": "Takes a positive integer as input and demonstrates left shift and right shift operators, printing the outcomes for each shift.",
+    "code": "import java.util.Scanner;\n\npublic class ShiftExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a positive integer: \");\n        int num = scanner.nextInt();\n        System.out.println(\"Left shift (num << 1): \" + (num << 1));\n        System.out.println(\"Right shift (num >> 1): \" + (num >> 1));\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Compound Assignment Operators",
+    "id": "compound_assignment",
+    "description": "Takes an integer as input and demonstrates the use of compound assignment operators (+=, -=, *=) to modify the value, then prints the final result.",
+    "code": "import java.util.Scanner;\n\npublic class CompoundAssignment {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter an integer: \");\n        int num = scanner.nextInt();\n        num += 5; // Equivalent to num = num + 5\n        num -= 3; // Equivalent to num = num - 3\n        num *= 2; // Equivalent to num = num * 2\n        System.out.println(\"Final result: \" + num);\n        scanner.close();\n    }\n}"
   }
 ]

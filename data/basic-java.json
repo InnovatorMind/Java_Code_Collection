@@ -52,5 +52,41 @@
     "id": "print_unicode_characters",
     "description": "You can print Unicode characters using escape sequences.",
     "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Smiley: ☺\");\n  }\n}"
+  },
+  {
+    "title": "Using Comments in Java Code",
+    "id": "java_comments",
+    "description": "Comments in Java are essential for explaining code logic, improving readability, and aiding future maintenance. This example illustrates the three main types of comments: single-line comments using //, multi-line comments using /* ... */, and documentation comments using /** ... */.",
+    "code": "public class CommentsExample {\n    public static void main(String[] args) {\n        // Single-line comment: Explains the purpose of the next line.\n        System.out.println(\"Hello, World!\");\n\n        /*\n         * Multi-line comment: Useful for detailed explanations or describing a block of code.\n         * This comment spans multiple lines.\n         */\n        System.out.println(\"This line demonstrates the use of multi-line comments.\");\n\n        /**\n         * Documentation comment: Typically used to generate external documentation via tools like Javadoc.\n         * It can describe classes, methods, and their parameters.\n         */\n        System.out.println(\"Documentation comments provide formal descriptions for the code.\");\n    }\n}"
+  },
+  {
+    "title": "Basic Input with Scanner",
+    "id": "input_basic_string",
+    "description": "This example demonstrates how to use the Scanner class to take user input from the console. The program reads a single token (a word) entered by the user.",
+    "code": "import java.util.Scanner;\n\npublic class InputExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter your name: \");\n        String name = scanner.next(); // Reads input until whitespace\n        System.out.println(\"Hello, \" + name + \"!\");\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Input an Integer",
+    "id": "input_integer",
+    "description": "This example shows how to read an integer value from the console using the Scanner class.",
+    "code": "import java.util.Scanner;\n\npublic class InputIntegerExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter an integer: \");\n        int number = scanner.nextInt();\n        System.out.println(\"You entered: \" + number);\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Taking Various Types of Data Input",
+    "id": "input_various_types",
+    "description": "This example demonstrates how to handle multiple types of data input simultaneously using the Scanner class. It reads an integer, a double, a boolean, and a full line of text (string). An extra nextLine() call is used after reading numeric or boolean values to clear the newline character.",
+    "code": "import java.util.Scanner;\n\npublic class InputVariousTypesExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n\n        // Read an integer value\n        System.out.print(\"Enter your age: \");\n        int age = scanner.nextInt();\n        \n        // Read a double value\n        System.out.print(\"Enter your height in meters (e.g., 1.75): \");\n        double height = scanner.nextDouble();\n        \n        // Read a boolean value\n        System.out.print(\"Are you a student? (true/false): \");\n        boolean isStudent = scanner.nextBoolean();\n        \n        // Clear the newline left-over by previous nextInt(), nextDouble() or nextBoolean()\n        scanner.nextLine();\n        \n        // Read a full line of text\n        System.out.print(\"Enter your full name: \");\n        String fullName = scanner.nextLine();\n        \n        System.out.println(\"\\nSummary:\");\n        System.out.println(\"Age: \" + age);\n        System.out.println(\"Height: \" + height);\n        System.out.println(\"Student: \" + isStudent);\n        System.out.println(\"Full Name: \" + fullName);\n        \n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Input Full Line",
+    "id": "input_full_line",
+    "description": "This example demonstrates how to use the nextLine() method to read an entire line of text from the console. This is especially useful when the input contains spaces.",
+    "code": "import java.util.Scanner;\n\npublic class InputFullLineExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter a sentence: \");\n        String sentence = scanner.nextLine();\n        System.out.println(\"You said: \" + sentence);\n        scanner.close();\n    }\n}"
+  },
+  {
+    "title": "Multiple Inputs in One Line",
+    "id": "input_multiple_values",
+    "description": "This snippet shows how to take multiple inputs on the same line using the Scanner class. Each call to next() retrieves the next token separated by whitespace.",
+    "code": "import java.util.Scanner;\n\npublic class MultipleInputsExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print(\"Enter your first name and last name separated by space: \");\n        String firstName = scanner.next();\n        String lastName = scanner.next();\n        System.out.println(\"Hello, \" + firstName + \" \" + lastName + \"!\");\n        scanner.close();\n    }\n}"
   }
 ]
