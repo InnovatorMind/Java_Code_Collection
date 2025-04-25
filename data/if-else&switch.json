@@ -76,5 +76,29 @@
     "id": "multiple_of_five",
     "description": "This program checks whether a predefined number is a multiple of 5 using an if condition.",
     "code": "public class MultipleOfFive {\n    public static void main(String[] args) {\n        int number = 25;\n        if (number % 5 == 0) {\n            System.out.println(\"The number is a multiple of 5.\");\n        }\n    }\n}"
+  },
+  {
+    "title": "Reverse Loop",
+    "id": "reverse_loop",
+    "description": "A for loop can be used in reverse by decrementing the loop variable.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 5; i >= 1; i--) {\n      System.out.println(\"Countdown: \" + i);\n    }\n  }\n}"
+  },
+  {
+    "title": "Loop with Multiple Variables",
+    "id": "loop_multiple_variables",
+    "description": "A for loop can handle multiple variables and conditions simultaneously.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1, j = 5; i <= 5 && j >= 1; i++, j--) {\n      System.out.println(\"i: \" + i + \", j: \" + j);\n    }\n  }\n}"
+  },
+  {
+    "title": "Infinite Loop",
+    "id": "infinite_loop",
+    "description": "An infinite loop runs endlessly unless a break condition is added manually.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 0;\n    while (true) {\n      System.out.println(\"Running: \" + i);\n      if (i == 3) break;\n      i++;\n    }\n  }\n}"
+  },
+  {
+    "title": "Loop with Array Index",
+    "id": "loop_array_index",
+    "description": "Using a regular for loop to iterate over an array using its index.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    String[] names = {\"Alice\", \"Bob\", \"Charlie\"};\n    for (int i = 0; i < names.length; i++) {\n      System.out.println(\"Name: \" + names[i]);\n    }\n  }\n}"
   }
 ]
