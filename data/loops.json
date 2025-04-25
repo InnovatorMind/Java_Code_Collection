@@ -40,6 +40,30 @@
       "id": "continue_statement",
       "description": "The continue statement skips the current iteration and moves to the next one.",
       "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) continue;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
+    },
+    {
+      "title": "Reverse Loop",
+      "id": "reverse_loop",
+      "description": "A for loop can be used in reverse by decrementing the loop variable.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 5; i >= 1; i--) {\n      System.out.println(\"Countdown: \" + i);\n    }\n  }\n}"
+    },
+    {
+      "title": "Loop with Multiple Variables",
+      "id": "loop_multiple_variables",
+      "description": "A for loop can handle multiple variables and conditions simultaneously.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1, j = 5; i <= 5 && j >= 1; i++, j--) {\n      System.out.println(\"i: \" + i + \", j: \" + j);\n    }\n  }\n}"
+    },
+    {
+      "title": "Infinite Loop",
+      "id": "infinite_loop",
+      "description": "An infinite loop runs endlessly unless a break condition is added manually.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 0;\n    while (true) {\n      System.out.println(\"Running: \" + i);\n      if (i == 3) break;\n      i++;\n    }\n  }\n}"
+    },
+    {
+      "title": "Loop with Array Index",
+      "id": "loop_array_index",
+      "description": "Using a regular for loop to iterate over an array using its index.",
+      "code": "public class Loops {\n  public static void main(String[] args) {\n    String[] names = {\"Alice\", \"Bob\", \"Charlie\"};\n    for (int i = 0; i < names.length; i++) {\n      System.out.println(\"Name: \" + names[i]);\n    }\n  }\n}"
     }
   ]
   
