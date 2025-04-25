@@ -28,6 +28,36 @@
       "id": "array_multidimensional",
       "description": "A multidimensional array is an array of arrays.",
       "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[][] matrix = { {1, 2, 3}, {4, 5, 6} };\n    System.out.println(\"Element at (1,2): \" + matrix[1][2]);\n  }\n}"
+    },
+    {
+      "title": "Find Maximum Element in Array",
+      "id": "array_max_element",
+      "description": "Use a loop to find the maximum value in an array.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {10, 25, 3, 50, 15};\n    int max = numbers[0];\n    for (int i = 1; i < numbers.length; i++) {\n      if (numbers[i] > max) {\n        max = numbers[i];\n      }\n    }\n    System.out.println(\"Maximum value: \" + max);\n  }\n}"
+    },
+    {
+      "title": "Calculate Average of Array Elements",
+      "id": "array_average",
+      "description": "Find the average of values stored in an array.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {10, 20, 30, 40, 50};\n    int sum = 0;\n    for (int num : numbers) {\n      sum += num;\n    }\n    double average = (double) sum / numbers.length;\n    System.out.println(\"Average: \" + average);\n  }\n}"
+    },
+    {
+      "title": "Copy Array Elements to Another Array",
+      "id": "array_copy",
+      "description": "Copy elements from one array to another using a loop.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] original = {1, 2, 3, 4, 5};\n    int[] copy = new int[original.length];\n    for (int i = 0; i < original.length; i++) {\n      copy[i] = original[i];\n    }\n    System.out.println(\"Copied Element: \" + copy[2]);\n  }\n}"
+    },
+    {
+      "title": "Reverse an Array",
+      "id": "array_reverse",
+      "description": "Reverse the elements of an array using a loop.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {10, 20, 30, 40, 50};\n    for (int i = numbers.length - 1; i >= 0; i--) {\n      System.out.println(\"Element: \" + numbers[i]);\n    }\n  }\n}"
+    },
+    {
+      "title": "Search an Element in Array",
+      "id": "array_search",
+      "description": "Find whether a given element exists in an array.",
+      "code": "public class ArrayExample {\n  public static void main(String[] args) {\n    int[] numbers = {5, 10, 15, 20};\n    int search = 15;\n    boolean found = false;\n    for (int num : numbers) {\n      if (num == search) {\n        found = true;\n        break;\n      }\n    }\n    System.out.println(\"Element found: \" + found);\n  }\n}"
     }
   ]
   
