@@ -1,33 +1,62 @@
 [
-    {
-      "title": "Defining a Method",
-      "id": "method_definition",
-      "description": "A method is a block of code that performs a specific task.",
-      "code": "public class MethodsExample {\n  static void greet() {\n    System.out.println(\"Hello, welcome to Java!\");\n  }\n  public static void main(String[] args) {\n    greet();\n  }\n}"
-    },
-    {
-      "title": "Method with Parameters",
-      "id": "method_parameters",
-      "description": "A method can accept parameters to perform operations based on provided values.",
-      "code": "public class MethodsExample {\n  static void greet(String name) {\n    System.out.println(\"Hello, \" + name + \"!\");\n  }\n  public static void main(String[] args) {\n    greet(\"Alice\");\n  }\n}"
-    },
-    {
-      "title": "Method with Return Value",
-      "id": "method_return",
-      "description": "A method can return a value to the caller.",
-      "code": "public class MethodsExample {\n  static int square(int num) {\n    return num * num;\n  }\n  public static void main(String[] args) {\n    int result = square(5);\n    System.out.println(\"Square of 5: \" + result);\n  }\n}"
-    },
-    {
-      "title": "Method Overloading",
-      "id": "method_overloading",
-      "description": "Method overloading allows multiple methods with the same name but different parameters.",
-      "code": "public class MethodsExample {\n  static int add(int a, int b) {\n    return a + b;\n  }\n  static double add(double a, double b) {\n    return a + b;\n  }\n  public static void main(String[] args) {\n    System.out.println(add(5, 10));\n    System.out.println(add(5.5, 2.2));\n  }\n}"
-    },
-    {
-      "title": "Recursion",
-      "id": "method_recursion",
-      "description": "Recursion is when a method calls itself to solve a problem in smaller steps.",
-      "code": "public class MethodsExample {\n  static int factorial(int n) {\n    if (n == 1) return 1;\n    return n * factorial(n - 1);\n  }\n  public static void main(String[] args) {\n    System.out.println(\"Factorial of 5: \" + factorial(5));\n  }\n}"
-    }
-  ]
-  
+  {
+    "title": "Print a Welcome Message",
+    "id": "function_welcome_message",
+    "description": "Create a method that prints a welcome message.",
+    "code": "public class Welcome {\n  static void printWelcome() {\n    System.out.println(\"Welcome to Java Functions!\");\n  }\n  public static void main(String[] args) {\n    printWelcome();\n  }\n}"
+  },
+  {
+    "title": "Sum of Two Numbers",
+    "id": "function_sum_two_numbers",
+    "description": "Create a method that takes two integers as parameters and prints their sum.",
+    "code": "public class SumExample {\n  static void sum(int a, int b) {\n    System.out.println(\"Sum: \" + (a + b));\n  }\n  public static void main(String[] args) {\n    sum(10, 20);\n  }\n}"
+  },
+  {
+    "title": "Check Even or Odd",
+    "id": "function_check_even_odd",
+    "description": "Write a method that checks whether a number is even or odd.",
+    "code": "public class EvenOdd {\n  static void checkNumber(int num) {\n    if (num % 2 == 0)\n      System.out.println(num + \" is Even\");\n    else\n      System.out.println(num + \" is Odd\");\n  }\n  public static void main(String[] args) {\n    checkNumber(7);\n  }\n}"
+  },
+  {
+    "title": "Find Maximum of Two Numbers",
+    "id": "function_max_two_numbers",
+    "description": "Create a method that returns the greater of two numbers.",
+    "code": "public class MaxExample {\n  static int max(int a, int b) {\n    return (a > b) ? a : b;\n  }\n  public static void main(String[] args) {\n    System.out.println(\"Max: \" + max(8, 12));\n  }\n}"
+  },
+  {
+    "title": "Calculate Factorial",
+    "id": "function_factorial",
+    "description": "Write a method that returns the factorial of a number.",
+    "code": "public class FactorialExample {\n  static int factorial(int n) {\n    int result = 1;\n    for (int i = 1; i <= n; i++) {\n      result *= i;\n    }\n    return result;\n  }\n  public static void main(String[] args) {\n    System.out.println(\"Factorial of 5: \" + factorial(5));\n  }\n}"
+  },
+  {
+    "title": "Reverse a String",
+    "id": "function_reverse_string",
+    "description": "Write a method that reverses a string and returns it.",
+    "code": "public class ReverseString {\n  static String reverse(String str) {\n    String reversed = \"\";\n    for (int i = str.length() - 1; i >= 0; i--) {\n      reversed += str.charAt(i);\n    }\n    return reversed;\n  }\n  public static void main(String[] args) {\n    System.out.println(\"Reversed: \" + reverse(\"hello\"));\n  }\n}"
+  },
+  {
+    "title": "Check Prime Number",
+    "id": "function_check_prime",
+    "description": "Create a method that checks whether a number is prime.",
+    "code": "public class PrimeCheck {\n  static boolean isPrime(int n) {\n    if (n <= 1) return false;\n    for (int i = 2; i < n; i++) {\n      if (n % i == 0) return false;\n    }\n    return true;\n  }\n  public static void main(String[] args) {\n    System.out.println(\"Is 7 prime? \" + isPrime(7));\n  }\n}"
+  },
+  {
+    "title": "Calculate Power",
+    "id": "function_power_of_number",
+    "description": "Write a method that returns the result of a number raised to a power.",
+    "code": "public class PowerExample {\n  static int power(int base, int exponent) {\n    int result = 1;\n    for (int i = 0; i < exponent; i++) {\n      result *= base;\n    }\n    return result;\n  }\n  public static void main(String[] args) {\n    System.out.println(\"2^3 = \" + power(2, 3));\n  }\n}"
+  },
+  {
+    "title": "Sum of Array Elements",
+    "id": "function_sum_array",
+    "description": "Create a method that calculates and returns the sum of all elements in an array.",
+    "code": "public class ArraySum {\n  static int sum(int[] arr) {\n    int total = 0;\n    for (int num : arr) {\n      total += num;\n    }\n    return total;\n  }\n  public static void main(String[] args) {\n    int[] numbers = {1, 2, 3, 4, 5};\n    System.out.println(\"Sum: \" + sum(numbers));\n  }\n}"
+  },
+  {
+    "title": "Find Minimum in Array",
+    "id": "function_min_array",
+    "description": "Write a method that finds and returns the minimum element in an array.",
+    "code": "public class MinArray {\n  static int findMin(int[] arr) {\n    int min = arr[0];\n    for (int num : arr) {\n      if (num < min) {\n        min = num;\n      }\n    }\n    return min;\n  }\n  public static void main(String[] args) {\n    int[] nums = {6, 2, 8, 1, 5};\n    System.out.println(\"Min: \" + findMin(nums));\n  }\n}"
+  }
+]
