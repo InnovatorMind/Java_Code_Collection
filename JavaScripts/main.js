@@ -31,6 +31,7 @@ function showData(data) {
     const codeContent = document.createElement("code");
     codeContent.classList.add("language-javascript"); // Adjust based on the language
     codeContent.textContent = item.code;
+    code.appendChild(codeWrapper);
     code.appendChild(codeContent);
 
     const copyButton = document.createElement("button");
@@ -39,12 +40,41 @@ function showData(data) {
     copyButton.setAttribute("data-index", index);
     copyButton.addEventListener("click", () => copyCode(item.code, copyButton));
 
+    const mainContent = document.createElement("div");
+    mainContent.classList.add("main-content");
+
+    const output = document.createElement("div");
+    output.classList.add("output");
+    // Create toggle header
+    const toggleHeader = document.createElement("div");
+    toggleHeader.classList.add("toggle-header");
+    toggleHeader.textContent = "Output";
+    const arrow = document.createElement("span");
+    arrow.classList.add("arrow");
+    arrow.innerHTML = "&#9654;"; // right arrow
+    toggleHeader.appendChild(arrow);
+
+    // Create collapsible content
+    const content = document.createElement("div");
+    content.classList.add("collapsible-content");
+    content.textContent = item.output;
+
+    // Append header + content to .output
+    output.appendChild(toggleHeader);
+    output.appendChild(content);
+
     codeWrapper.appendChild(copyButton);
     section.appendChild(title);
     section.appendChild(description);
-    section.appendChild(codeWrapper);
-    section.appendChild(code);
+    mainContent.appendChild(code);
+    mainContent.appendChild(output);
+    section.appendChild(mainContent);
     container.appendChild(section);
+    // Toggle behavior
+    toggleHeader.addEventListener("click", () => {
+      content.classList.toggle("visible");
+      arrow.classList.toggle("open");
+    });
   });
 
   Prism.highlightAll(); // Apply syntax highlighting
@@ -86,17 +116,17 @@ function copyCode(code, button) {
     .catch((err) => console.error("Failed to copy:", err));
 }
 
-
-
-function something(){
+function something() {
   const sections = document.querySelectorAll(".code-block");
   console.log("Sections:", sections);
-  
+
   const sidebarLinks = document.querySelectorAll("#sidebar a");
   console.log("Sidebar Links:", sidebarLinks);
-  
+
   if (sections.length === 0 || sidebarLinks.length === 0) {
-    console.error("Sections or sidebar links not found. Check your HTML structure.");
+    console.error(
+      "Sections or sidebar links not found. Check your HTML structure."
+    );
     return;
   }
 
@@ -106,7 +136,9 @@ function something(){
         if (entry.isIntersecting) {
           sidebarLinks.forEach((link) => link.classList.remove("active"));
 
-          const activeLink = document.querySelector(`#sidebar a[href="#${entry.target.id}"]`);
+          const activeLink = document.querySelector(
+            `#sidebar a[href="#${entry.target.id}"]`
+          );
           if (activeLink) {
             activeLink.classList.add("active");
           } else {
@@ -119,5 +151,4 @@ function something(){
   );
 
   sections.forEach((section) => observer.observe(section));
-};
-
+}

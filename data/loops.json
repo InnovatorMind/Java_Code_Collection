@@ -1,99 +1,114 @@
 [
-    {
-      "title": "For Loop",
-      "id": "for_loop",
-      "description": "A for loop allows code to be executed repeatedly based on a given condition.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
-    },
-    {
-      "title": "While Loop",
-      "id": "while_loop",
-      "description": "A while loop executes a block of code repeatedly as long as the given condition remains true.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 1;\n    while (i <= 5) {\n      System.out.println(\"Iteration: \" + i);\n      i++;\n    }\n  }\n}"
-    },
-    {
-      "title": "Do-While Loop",
-      "id": "do_while_loop",
-      "description": "A do-while loop executes the code block once before checking the condition.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 1;\n    do {\n      System.out.println(\"Iteration: \" + i);\n      i++;\n    } while (i <= 5);\n  }\n}"
-    },
-    {
-      "title": "For-Each Loop",
-      "id": "for_each_loop",
-      "description": "A for-each loop is used to iterate over elements in an array or collection.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    int[] numbers = {1, 2, 3, 4, 5};\n    for (int num : numbers) {\n      System.out.println(\"Number: \" + num);\n    }\n  }\n}"
-    },
-    {
-      "title": "Nested Loops",
-      "id": "nested_loops",
-      "description": "A loop inside another loop is called a nested loop. It is used for multi-dimensional iteration.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 3; i++) {\n      for (int j = 1; j <= 3; j++) {\n        System.out.println(\"i: \" + i + \", j: \" + j);\n      }\n    }\n  }\n}"
-    },
-    {
-      "title": "Break Statement",
-      "id": "break_statement",
-      "description": "The break statement is used to exit a loop immediately when a condition is met.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) break;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
-    },
-    {
-      "title": "Continue Statement",
-      "id": "continue_statement",
-      "description": "The continue statement skips the current iteration and moves to the next one.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) continue;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}"
-    },
-    {
-      "title": "Reverse Loop",
-      "id": "reverse_loop",
-      "description": "A for loop can be used in reverse by decrementing the loop variable.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 5; i >= 1; i--) {\n      System.out.println(\"Countdown: \" + i);\n    }\n  }\n}"
-    },
-    {
-      "title": "Loop with Multiple Variables",
-      "id": "loop_multiple_variables",
-      "description": "A for loop can handle multiple variables and conditions simultaneously.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1, j = 5; i <= 5 && j >= 1; i++, j--) {\n      System.out.println(\"i: \" + i + \", j: \" + j);\n    }\n  }\n}"
-    },
-    {
-      "title": "Infinite Loop",
-      "id": "infinite_loop",
-      "description": "An infinite loop runs endlessly unless a break condition is added manually.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 0;\n    while (true) {\n      System.out.println(\"Running: \" + i);\n      if (i == 3) break;\n      i++;\n    }\n  }\n}"
-    },
-    {
-      "title": "Loop with Array Index",
-      "id": "loop_array_index",
-      "description": "Using a regular for loop to iterate over an array using its index.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    String[] names = {\"Alice\", \"Bob\", \"Charlie\"};\n    for (int i = 0; i < names.length; i++) {\n      System.out.println(\"Name: \" + names[i]);\n    }\n  }\n}"
-    },
-    {
-      "title": "Sum of Numbers Using Loop",
-      "id": "sum_using_loop",
-      "description": "A loop can be used to calculate the sum of a series of numbers.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    int sum = 0;\n    for (int i = 1; i <= 10; i++) {\n      sum += i;\n    }\n    System.out.println(\"Sum: \" + sum);\n  }\n}"
-    },
-    {
-      "title": "Print Even Numbers",
-      "id": "print_even_numbers",
-      "description": "Use a loop to print only even numbers from 1 to 10.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 2; i <= 10; i += 2) {\n      System.out.println(\"Even: \" + i);\n    }\n  }\n}"
-    },
-    {
-      "title": "Print Multiplication Table",
-      "id": "multiplication_table",
-      "description": "Print the multiplication table of a number using a loop.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    int num = 5;\n    for (int i = 1; i <= 10; i++) {\n      System.out.println(num + \" x \" + i + \" = \" + (num * i));\n    }\n  }\n}"
-    },
-    {
-      "title": "Right Triangle Pattern",
-      "id": "right_triangle_pattern",
-      "description": "Use nested loops to print a right triangle pattern of stars.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      for (int j = 1; j <= i; j++) {\n        System.out.print(\"*\");\n      }\n      System.out.println();\n    }\n  }\n}"
-    },
-    {
-      "title": "Loop with Break and Continue",
-      "id": "break_and_continue",
-      "description": "Use both break and continue statements inside the same loop.",
-      "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 10; i++) {\n      if (i == 4) continue;\n      if (i == 8) break;\n      System.out.println(\"i: \" + i);\n    }\n  }\n}"
-    }
-  ]
-  
+  {
+    "title": "For Loop",
+    "id": "for_loop",
+    "description": "A for loop allows code to be executed repeatedly based on a given condition.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}",
+    "output": "Iteration: 1\nIteration: 2\nIteration: 3\nIteration: 4\nIteration: 5"
+  },
+  {
+    "title": "While Loop",
+    "id": "while_loop",
+    "description": "A while loop executes a block of code repeatedly as long as the given condition remains true.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 1;\n    while (i <= 5) {\n      System.out.println(\"Iteration: \" + i);\n      i++;\n    }\n  }\n}",
+    "output": "Iteration: 1\nIteration: 2\nIteration: 3\nIteration: 4\nIteration: 5"
+  },
+  {
+    "title": "Do-While Loop",
+    "id": "do_while_loop",
+    "description": "A do-while loop executes the code block once before checking the condition.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 1;\n    do {\n      System.out.println(\"Iteration: \" + i);\n      i++;\n    } while (i <= 5);\n  }\n}",
+    "output": "Iteration: 1\nIteration: 2\nIteration: 3\nIteration: 4\nIteration: 5"
+  },
+  {
+    "title": "For-Each Loop",
+    "id": "for_each_loop",
+    "description": "A for-each loop is used to iterate over elements in an array or collection.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int[] numbers = {1, 2, 3, 4, 5};\n    for (int num : numbers) {\n      System.out.println(\"Number: \" + num);\n    }\n  }\n}",
+    "output": "Number: 1\nNumber: 2\nNumber: 3\nNumber: 4\nNumber: 5"
+  },
+  {
+    "title": "Nested Loops",
+    "id": "nested_loops",
+    "description": "A loop inside another loop is called a nested loop. It is used for multi-dimensional iteration.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 3; i++) {\n      for (int j = 1; j <= 3; j++) {\n        System.out.println(\"i: \" + i + \", j: \" + j);\n      }\n    }\n  }\n}",
+    "output": "i: 1, j: 1\ni: 1, j: 2\ni: 1, j: 3\ni: 2, j: 1\ni: 2, j: 2\ni: 2, j: 3\ni: 3, j: 1\ni: 3, j: 2\ni: 3, j: 3"
+  },
+  {
+    "title": "Break Statement",
+    "id": "break_statement",
+    "description": "The break statement is used to exit a loop immediately when a condition is met.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) break;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}",
+    "output": "Iteration: 1\nIteration: 2"
+  },
+  {
+    "title": "Continue Statement",
+    "id": "continue_statement",
+    "description": "The continue statement skips the current iteration and moves to the next one.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      if (i == 3) continue;\n      System.out.println(\"Iteration: \" + i);\n    }\n  }\n}",
+    "output": "Iteration: 1\nIteration: 2\nIteration: 4\nIteration: 5"
+  },
+  {
+    "title": "Reverse Loop",
+    "id": "reverse_loop",
+    "description": "A for loop can be used in reverse by decrementing the loop variable.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 5; i >= 1; i--) {\n      System.out.println(\"Countdown: \" + i);\n    }\n  }\n}",
+    "output": "Countdown: 5\nCountdown: 4\nCountdown: 3\nCountdown: 2\nCountdown: 1"
+  },
+  {
+    "title": "Loop with Multiple Variables",
+    "id": "loop_multiple_variables",
+    "description": "A for loop can handle multiple variables and conditions simultaneously.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1, j = 5; i <= 5 && j >= 1; i++, j--) {\n      System.out.println(\"i: \" + i + \", j: \" + j);\n    }\n  }\n}",
+    "output": "i: 1, j: 5\ni: 2, j: 4\ni: 3, j: 3\ni: 4, j: 2\ni: 5, j: 1"
+  },
+  {
+    "title": "Infinite Loop",
+    "id": "infinite_loop",
+    "description": "An infinite loop runs endlessly unless a break condition is added manually.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int i = 0;\n    while (true) {\n      System.out.println(\"Running: \" + i);\n      if (i == 3) break;\n      i++;\n    }\n  }\n}",
+    "output": "Running: 0\nRunning: 1\nRunning: 2\nRunning: 3"
+  },
+  {
+    "title": "Loop with Array Index",
+    "id": "loop_array_index",
+    "description": "Using a regular for loop to iterate over an array using its index.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    String[] names = {\"Alice\", \"Bob\", \"Charlie\"};\n    for (int i = 0; i < names.length; i++) {\n      System.out.println(\"Name: \" + names[i]);\n    }\n  }\n}",
+    "output": "Name: Alice\nName: Bob\nName: Charlie"
+  },
+  {
+    "title": "Sum of Numbers Using Loop",
+    "id": "sum_using_loop",
+    "description": "A loop can be used to calculate the sum of a series of numbers.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int sum = 0;\n    for (int i = 1; i <= 10; i++) {\n      sum += i;\n    }\n    System.out.println(\"Sum: \" + sum);\n  }\n}",
+    "output": "Sum: 55"
+  },
+  {
+    "title": "Print Even Numbers",
+    "id": "print_even_numbers",
+    "description": "Use a loop to print only even numbers from 1 to 10.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 2; i <= 10; i += 2) {\n      System.out.println(\"Even: \" + i);\n    }\n  }\n}",
+    "output": "Even: 2\nEven: 4\nEven: 6\nEven: 8\nEven: 10"
+  },
+  {
+    "title": "Print Multiplication Table",
+    "id": "multiplication_table",
+    "description": "Print the multiplication table of a number using a loop.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    int num = 5;\n    for (int i = 1; i <= 10; i++) {\n      System.out.println(num + \" x \" + i + \" = \" + (num * i));\n    }\n  }\n}",
+    "output": "5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n5 x 6 = 30\n5 x 7 = 35\n5 x 8 = 40\n5 x 9 = 45\n5 x 10 = 50"
+  },
+  {
+    "title": "Right Triangle Pattern",
+    "id": "right_triangle_pattern",
+    "description": "Use nested loops to print a right triangle pattern of stars.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++) {\n      for (int j = 1; j <= i; j++) {\n        System.out.print(\"*\");\n      }\n      System.out.println();\n    }\n  }\n}",
+    "output": "*\n**\n***\n****\n*****"
+  },
+  {
+    "title": "Loop with Break and Continue",
+    "id": "break_and_continue",
+    "description": "Use both break and continue statements inside the same loop.",
+    "code": "public class Loops {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 10; i++) {\n      if (i == 4) continue;\n      if (i == 8) break;\n      System.out.println(\"i: \" + i);\n    }\n  }\n}",
+    "output": "i: 1\ni: 2\ni: 3\ni: 5\ni: 6\ni: 7"
+  }
+]
