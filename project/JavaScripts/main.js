@@ -1,7 +1,21 @@
-document.querySelector(".menu-toggle").addEventListener("click", function () {
-  const sidebar = document.getElementById("sidebar");
+const toggleBtn = document.querySelector(".menu-toggle");
+const sidebar = document.getElementById("sidebar");
+
+toggleBtn.addEventListener("click", function (e) {
   sidebar.classList.toggle("show");
+  e.stopPropagation(); // prevent the document click from firing immediately
 });
+
+// Close sidebar when clicking outside
+document.addEventListener("click", function (e) {
+  const isClickInsideSidebar = sidebar.contains(e.target);
+  const isClickOnToggle = toggleBtn.contains(e.target);
+
+  if (!isClickInsideSidebar && !isClickOnToggle) {
+    sidebar.classList.remove("show");
+  }
+});
+
 
 // Automatically load "basic-java" when the page loads
 window.addEventListener("DOMContentLoaded", () => {
@@ -86,8 +100,8 @@ function loadPage(topic) {
     console.error("No topic provided for loadPage.");
     return;
   }
-
-  fetch(`data/${topic}.json`)
+  // console.log(selectedLanguage);
+  fetch(`https://raw.githubusercontent.com/InnovatorMind/Experimetal-Repo/refs/heads/main/${selectedLanguage}/data/${topic}.json`)
     .then((response) => response.json())
     .then((data) => {
       //   // Clear sidebar
@@ -118,10 +132,10 @@ function copyCode(code, button) {
 
 function something() {
   const sections = document.querySelectorAll(".code-block");
-  console.log("Sections:", sections);
+  // console.log("Sections:", sections);
 
   const sidebarLinks = document.querySelectorAll("#sidebar a");
-  console.log("Sidebar Links:", sidebarLinks);
+  // console.log("Sidebar Links:", sidebarLinks);
 
   if (sections.length === 0 || sidebarLinks.length === 0) {
     console.error(
