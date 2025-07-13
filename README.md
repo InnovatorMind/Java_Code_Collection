@@ -1,6 +1,6 @@
 
 # 💡 Logic Builder Hub
-live link :- https://innovatormind.github.io/Java_Code_Collection/project
+live link :- https://innovatormind.github.io/Logic_Builder_Hub/project/
 
 
 A beginner-friendly platform designed to help learners strengthen their logic-building and problem-solving skills by solving categorized programming questions across multiple languages — all from a single, dynamic dashboard.
