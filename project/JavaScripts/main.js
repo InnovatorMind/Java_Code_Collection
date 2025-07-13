@@ -101,7 +101,7 @@ function loadPage(topic) {
     return;
   }
   // console.log(selectedLanguage);
-  fetch(`https://raw.githubusercontent.com/InnovatorMind/Experimetal-Repo/refs/heads/main/${selectedLanguage}/data/${topic}.json`)
+  fetch(`https://raw.githubusercontent.com/InnovatorMind/logic-builder-data/refs/heads/main/${selectedLanguage}/data/${topic}.json`)
     .then((response) => response.json())
     .then((data) => {
       //   // Clear sidebar

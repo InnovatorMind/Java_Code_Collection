@@ -7,11 +7,12 @@
 
 body {
   width: 100%;
-  background: url(wallhav.png);
+  background: url(codeboy.png);
   background-attachment: fixed;
   background-position: right;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-color: black;
 }
 
 /* Nav-Bar  */
@@ -151,6 +152,11 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 16px;
+}
+#content > div {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 #content > div > h2 {
@@ -174,7 +180,7 @@ h1 {
 }
 
 pre {
-  background: rgba(2, 3, 3, 0.473) !important;
+  background: rgba(12, 16, 16, 0.473) !important;
   padding: 10px;
   border-radius: 4px;
   overflow: auto;

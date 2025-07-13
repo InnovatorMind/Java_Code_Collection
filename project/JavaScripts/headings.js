@@ -5,8 +5,7 @@ const selectedLanguage = urlParams.get("lang"); // "java", "cpp", etc.
 async function fetchNavData() {
     try {
         // Replace with your actual API endpoint
-        // console.log(`../Experimetal-Repo/${selectedLanguage}/heading.json`)
-          const res = await fetch(`https://raw.githubusercontent.com/InnovatorMind/Experimetal-Repo/refs/heads/main/${selectedLanguage}/heading.json`);
+          const res = await fetch(`https://raw.githubusercontent.com/InnovatorMind/logic-builder-data/refs/heads/main/${selectedLanguage}/heading.json`);
           const data = await res.json();
 
         // 1. Update the first <li> in the <ul>
